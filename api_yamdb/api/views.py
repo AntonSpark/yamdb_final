@@ -1,16 +1,16 @@
-from rest_framework import viewsets, filters, permissions, serializers
-from django.shortcuts import get_object_or_404
 from django.db.models import Avg
+from rest_framework import filters, permissions, serializers, viewsets
+from django.shortcuts import get_object_or_404
 
-from .mixins import CategoryGenreModelMixin
 from .filters import TitleFilter
+from .mixins import CategoryGenreModelMixin
+from .permissions import (
+    IsAdministratorOrReadOnly, IsAuthorAdminModeratorOrReadOnly
+)
 from .serializers import (
     CategorySerializer, GenreSerializer,
     TitleSerializer, CommentSerializer,
     ReviewSerializer, TitleCreateSerializer
-)
-from .permissions import (
-    IsAdministratorOrReadOnly, IsAuthorAdminModeratorOrReadOnly
 )
 from reviews.models import Category, Genre, Title, Review
 
