@@ -78,3 +78,5 @@ docker-compose exec web python manage.py loaddata fixtures.json
 ### Над проектом работал:
 
 Антон Искров
+
+https://github.com/AntonSpark/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
