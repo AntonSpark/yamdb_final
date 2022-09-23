@@ -9,7 +9,7 @@ services:
       - ./.env
   
   web:
-    image: sparkanton/infra:v1
+    image: sparkanton/infra:latest
     restart: always
     volumes:
       - static_value:/app/static/
@@ -30,6 +30,7 @@ services:
     depends_on:
       - web
 
-volumes: 
+volumes:
+  db_value:
   static_value:
   media_value:
