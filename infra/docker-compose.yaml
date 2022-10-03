@@ -9,7 +9,7 @@ services:
       - ./.env
   
   web:
-    image: sparkanton/yamdb_final:latest
+    image: sparkanton/yamdb_final
     restart: always
     volumes:
       - static_value:/app/static/
